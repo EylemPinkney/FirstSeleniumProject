@@ -1,0 +1,120 @@
+***Day 1***
+
+1. WebDriver
+WebDriver is an important API in selenium. We use WebDriver to create driver object(chrome driver, safari, edge, firefox, headless,..)
+2. Job title
+-QA Engineer, Quality Assurance, SDET, …..
+Quality Assuarance, S
+-If there is Selenium keyword in job description, you can apply
+3. Framework
+It is a combination of packages, classes, methods to keep our codes organized.
+4. Manual vs Automation
+Automation is simply done for keeping the test step stable and execution test cases faster
+5. Advantages & Disadvantages
+Selenium is number 1 WEB APPLICATION TESTING TOOL, open source, has large user base, works with multiple browsers, and languages
+Cannot automate mobile and desktop applications with out 3rd party tools such as Appium and Auto IT, cannot handle captcha,
+no professional customer support
+6. Functional & Non Functional Testing
+Functionality is the answer of what should be done(button click, search, check out,…), non - functional is the answer of
+how should be done(performance, security,…)
+7. Testing Types
+Static: done without code such as document review
+Dynamic(non-static): done with some type of coding(functional and non functional)
+8. Selenium Architecture
+W3C protocol
+There is request and response between client side (selenium binding) and server side(drivers)
+9. Selenium framework installation
+We need to be organized to create a framework
+We use dependencies in MAVEN project to add selenium, WebDriver, junit, testNG, cucumber,….
+
+***Day 2***
+
+Navigations
+
+***Day 3***
+
+***Maven
+
+Maven is a powerful project management tool. It is based on POM (project object model).
+It is used for project build, dependency, and documentation. It simplifies the build process like ANT.
+But it is too much more advanced than ANT. In short terms we can tell maven is a tool that can be used
+for building and managing any Java-based project. Maven makes the day-to-day work of Java developers easier
+and generally helps with the comprehension of any Java-based project.
+
+***JUnit
+
+JUnit is the most basic java testing framework.
+Testers use JUnit to create testing framework and orginize the test scripts.(Smoke test, regression test..)
+Developers also uses JUnit to run unit tests.
+
+***BIG Picture***
+
+Test Frameworks
+
+JUnit       TestNG      Cucumber
+Maven       Maven       Maven
+Selenium    Selenium    Selenium
+
+They are all used for the same purpose; creating test automation framework
+
+What are the differences between;
+
+JUnit; is faster than TestNg, but TestNg has more annotations(e.g. @before, after, more of them.) Normally JUnit is enough,
+but TestNg i specifically for testers, provides more functions.
+TestNG; JUnit ans TestNG test driven
+Cucumber; has feature files, BDD Behaviour Driven. It is different than others and popular, high in demand.
+
+Course Structure
+JUnit; JUnit + Selenium
+TestNG; POM(Page Object Model) + TestNG
+Cucumber; cucumber + reports (including POM and selenium)
+Internship; Maven + Selenium + Cucumber
+
+*** There are 6 junit annotations
+        1. @Test : is used to create test case.
+        * All test cases must be void cause test cases are created to do assertions
+        2.@Before and @After : are used to run before or after EACH @TEST method
+        3.@BeforeClass and @AfterClass : are used to run before or after EACH CLASS ONLY ONCE. These methods must be static
+        4.Ignore : is used to SKIP a test case
+
+
+        Pre Conditions are put in this @Before method such as SET UP, create driver, maximaze window, implicit wait
+        After conditions are put in this method such as quit or close, reports generation,....
+
+        ***What is assertion?
+            Assertion is done to make sure expected and actual are equal
+            Assertions are very very very important in testing
+            Assertion is done to improve the quality of the application and bug-free products
+            -expected = actual  ==>>> PASS
+            -expected != actual ==>>> FAIL
+            *********************************
+            * assertEquals("expected","actual"); CHECKS THE VALUES AND DATA TYPE
+            * assertTrue(true) ==>>> PASS
+            * assertTrue(false) ==>>>> FAIL
+            * assertFalse(false) ==>>> PASS
+            * assertFalse(true) ==>>> FAIL
+            * ******************************
+            * These assertions are HARD assertions
+            * If one of the assertion fails, the rest of the test case WILL NOT EXECUTE
+            * For example. if line 29 FAILS, then the test case will stop
+            * ******************************
+            * Assertion VS Verification?
+            * Assertion = Hard assertion which means test case stops if this assertion fails
+            * Verification = soft assertion = Not hard assertion which means the test case continue to execute even after FAILURE. Eg : if else
+
+***Day 4***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
