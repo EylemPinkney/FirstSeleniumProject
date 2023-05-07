@@ -13,7 +13,13 @@ import java.time.Duration;
 
 public class Day04_xpath_css {
 
-    WebDriver driver;
+    WebDriver driver;//We declare WebDriver here at the class level.
+    /*
+    The process of defining a variable along with its data type and
+    name is called the declaration of state of an object. It is also called declaration of variable.
+    For example, if we declare driver as a variable with data type WebDriver, this variable is called
+    instance variable in Java.
+     */
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -22,6 +28,13 @@ public class Day04_xpath_css {
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
+
+
+//    When user goes to : https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+//    And enter username
+//    And enter password
+//    And click on submit button
+//    Then verify the login is successful
     @Test
     public void loginTest(){
 //username
@@ -47,6 +60,6 @@ public class Day04_xpath_css {
 
     @After
     public void tearDown(){
-        driver.quit();
+    driver.quit();
     }
 }

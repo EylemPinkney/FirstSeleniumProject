@@ -11,12 +11,14 @@ public abstract class TestBase {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver= new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         driver.manage().window().maximize();
     }
-    @After
+   @After
     public void tearDown() throws InterruptedException {
-        Thread.sleep(5000);
-        driver.quit();
+    Thread.sleep(5000);
+    driver.quit();
+   }
+
     }
-}
+

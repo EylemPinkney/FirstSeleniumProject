@@ -55,8 +55,8 @@ Then verify that checkbox1 is checked.
 
     }
 
-    @After
-    public void tearDown() {
+   @After
+        public void tearDown() {
         driver.quit();
     }
 
