@@ -1,0 +1,20 @@
+*****Interview Questions*****
+
+What do you do when your automation script FAILS?
+    1. Run automation script again to make sure it fails again
+    2.Wait issue(Syncronization issue)
+        Add more wait and use EXPLICIT WAIT(WE WILL LEARN LATER)
+    3. Do one more time manual testing to see if there is a bug
+        3a. If you see a bug, then check with devs to make sure that is a bug, then raise a bug ticket if needed. If that is a real bug, then dev fix, and I retest until I observe no more bug, then close the ticket.
+        3b. If you DO NOT see any problem then go following steps
+    4.  Check the automation script
+        4a. Locator might be wrong
+        4b. Test data maybe invalid(credentials, URL, environment,…)
+        4c. Typo in the data or locator
+        4c. If locator, data, env,… is correct then of following steps
+    5. Check if there is an iframe
+        Switch to frame
+    6. Check if there is an alert
+        Switch to alert
+    7. New window
+        Switch to the window

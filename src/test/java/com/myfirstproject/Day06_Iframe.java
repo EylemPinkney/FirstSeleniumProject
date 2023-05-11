@@ -23,10 +23,12 @@ public class Day06_Iframe extends TestBase {
         I try to locate button
         When I switch to the frame I will locate the element and wil not get no such element exception
          */
-//        driver.switchTo().frame(0);//1. switching to the first frame by index
-//         driver.switchTo().frame("name or id of the frame element");//2. SKIP cause there is no id or name of the frame
-        WebElement frameElement = driver.findElement(By.xpath("//iframe[@src='/index.php']"));
-        driver.switchTo().frame(frameElement);//3. switching the frame element by locating the frame
+        driver.switchTo().frame(0);//1. switching to the first frame by index
+
+//        driver.switchTo().frame("name or id of the frame element");//2. SKIP cause there is no id or name of the frame
+
+        //WebElement frameElement = driver.findElement(By.xpath("//iframe[@src='/index.php']"));
+        //driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='/index.php']")));//3. switching the frame element by locating the frame
 
 //        AT THIS POINT DRIVER IS INSIDE THE FRAME
 
