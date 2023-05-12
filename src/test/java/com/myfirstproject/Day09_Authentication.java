@@ -29,6 +29,8 @@ public class Day09_Authentication extends TestBase {
 
         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 
+        //Assert if login is successfull
+
         String actualLoginText = driver.findElement(By.xpath("//div[@id='content']//p")).getText();
         Assert.assertTrue(actualLoginText.contains("Congratulations!"));
     }

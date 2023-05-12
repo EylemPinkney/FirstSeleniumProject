@@ -16,7 +16,9 @@ public class Day09_FileDownloadTest extends TestBase {
         driver.get("https://testcenter.techproeducation.com/index.php?page=file-download");
 //        Download b10 all test cases, code.docx  file
         driver.findElement(By.partialLinkText("b10 all test cases")).click();
-        Thread.sleep(2000);//wait until the file is download COMPLETELY
+        Thread.sleep(2000);//wait until the file is download COMPLETELY-We add Thread here because download
+        //takes time. Ideally do manual testing and to see how long sleep time you need.
+
 //        Then verify if the file downloaded successfully
 
         String filePath = System.getProperty("user.home")+"/Downloads/b10 all test cases, code.docx";

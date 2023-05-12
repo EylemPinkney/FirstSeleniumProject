@@ -4,7 +4,6 @@ import com.myfirstproject.utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class Day06_dynamic_xpath extends TestBase {
 

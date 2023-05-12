@@ -10,6 +10,10 @@ public class Day09_FileExistTest {
 
     @Test
     public void isExist(){
+
+        /*
+        We can not handle files with Selenium but we can use JAVA to work with files.
+         */
 //        Pick a file on your desktop
 //        And verify if that file exist on your computer or not
 

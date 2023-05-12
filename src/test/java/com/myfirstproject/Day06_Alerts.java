@@ -3,7 +3,6 @@ package com.myfirstproject;
 import com.myfirstproject.utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 
 public class Day06_Alerts extends TestBase {

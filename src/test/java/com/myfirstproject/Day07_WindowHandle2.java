@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WindowType;
 
-import java.awt.*;
-
 public class Day07_WindowHandle2 extends TestBase {
 
     @Test
