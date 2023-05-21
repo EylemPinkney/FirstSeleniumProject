@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -62,7 +63,7 @@ public abstract class TestBase {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver= new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
     @After
@@ -148,7 +149,7 @@ public abstract class TestBase {
         js.executeScript("arguments[0].click();",element);
     }
     /*
-    @param String id of the WebElement that we want to locate
+    @param String id of teh webelement that we want to locate
     locating element using javascript executor
     and returns that WebElement
     Note that this is NOT common and we should use 8 locators that we learned in selenium
@@ -165,7 +166,6 @@ public abstract class TestBase {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].setAttribute('value','"+text+"')",inputElement);
     }
-
     /*   HARD WAIT:
       @param : second
     */
@@ -176,7 +176,6 @@ public abstract class TestBase {
             e.printStackTrace();
         }
     }
-
     /*
     SELENIUM WAIT REUSABLE METHODS
      */
@@ -186,23 +185,18 @@ public abstract class TestBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
-
     public static WebElement waitForVisibility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
     public static WebElement waitForClickablility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-
-
     public static void clickWithTimeOut(WebElement element, int timeout) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -213,7 +207,6 @@ public abstract class TestBase {
             }
         }
     }
-
     //    This can be used when a new page opens
     public static void waitForPageToLoad(long timeout) {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
@@ -230,7 +223,6 @@ public abstract class TestBase {
                     "Timeout waiting for Page Load Request to complete after " + timeout + " seconds");
         }
     }
-
     //======Fluent Wait====
     // params : xpath of teh element , max timeout in seconds, polling in second
     public static WebElement fluentWait(String xpath, int withTimeout, int pollingEvery) {
@@ -239,8 +231,6 @@ public abstract class TestBase {
                 .pollingEvery(Duration.ofSeconds(pollingEvery))//Check for the element every 1 second
                 .withMessage("Ignoring No Such Element Exception")
                 .ignoring(NoSuchElementException.class);
-
-
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         return element;
     }
